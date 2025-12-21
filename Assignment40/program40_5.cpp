@@ -1,0 +1,47 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : Display
+//  Description :   Display the pattern
+//  Input:          Integer 
+//  output :        Void
+//  Author :        Pramod Khandu Borate
+//  Date :          01/12/2025
+//
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include<iostream>                                 
+using namespace std ;
+
+
+void Display(int iNo)
+{
+    static int iCnt = 0 ;
+    static char ch = 'a';
+    if(iCnt < iNo)
+    {
+        printf("%c\t", ch);
+        ch++ ;
+        iCnt++;
+        Display(iNo);
+    }
+    
+
+}
+
+int main()
+{   
+    int iValue = 0;
+
+    cout<<"Enter the number:"<<"\n";
+    cin>>iValue;
+
+    Display(iValue);   
+    return 0;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Input:6                                    Output:a  b  c  d  e  f
+//   
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
